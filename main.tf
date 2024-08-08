@@ -13,7 +13,10 @@ provider "aws" {
         #profile = "default"
 	}
 
-resource "aws_instance" "Raminfra" {
+resource "aws_instance" "pavaninfra" {
 	ami = "ami-0c2b8ca1dad447f8a" 
 	instance_type = "t2.nano"
+tag = {
+Name = "pavan-cloud"
+}
 }
